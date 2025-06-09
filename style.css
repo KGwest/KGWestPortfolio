@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kezia West | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <span class="logo">Kezia West</span>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <img src="star-background.gif" alt="" class="stars-bg" aria-hidden="true">
+    <div class="about-card">
+      <h2>About Me</h2>
+      <p>
+        Hi, I'm Kezia—a linguistics senior at UTA and a tech-driven builder with a passion for bridging communication gaps. My work blends immersive learning, language tech, and inclusive design. From developing AI language tools to rolling out ERP systems for schools and nonprofits, my focus is making language more accessible and human for everyone.
+      </p>
+      <p>
+        I’m bilingual (English/Spanish), have experience with Chinese and Korean, and thrive on projects that sit at the intersection of language, technology, and education. Whether I’m designing AI-powered web apps, translating for my community, or researching the quirks of human language, I’m all about building tools that create connection and expand opportunities.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>G-U-E-S-S (Association Game)</h3>
+        <p>A guessing game where you try to find the AI's secret word by association.</p>
+        <div class="project-thumb">🎲</div>
+      </div>
+      <div class="project-card">
+        <h3>IPA Guess & Cup Toss</h3>
+        <p>Guess which IPA symbol links the words. Score for a chance to toss a ball in a cup!</p>
+        <div class="project-thumb">🧑‍🎤 🏆</div>
+      </div>
+      <div class="project-card">
+        <h3>Reward Generator</h3>
+        <p>A fun mental health app that awards surprise treats.</p>
+        <div class="project-thumb">🎁</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <img src="koi-fish.gif" alt="" class="koi-bg" aria-hidden="true">
+    <div class="contact-card">
+      <h2>Contact</h2>
+      <form onsubmit="event.preventDefault(); alert('Thanks for reaching out! I\'ll get back to you soon.'); this.reset();">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Kezia West
+  </footer>
+</body>
+</html>
