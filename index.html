@@ -56,6 +56,17 @@
     </div>
   </section>
 
+
+  <!-- 1. HTML Section
+
+<section id="books-impact">
+  <h2>Books That Made a Lasting Impact</h2>
+  <img id="book-image" src="images/book1.jpg" alt="Book Cover" style="width:200px; height:auto;">
+  <p id="book-title">Book Title 1</p>
+</section>
+
+ -->
+
   <!-- Contact Section -->
   <section id="contact" class="contact-section">
     <div class="contact-card">
@@ -73,5 +84,24 @@
   <footer>
     © 2025 Kezia West
   </footer>
+<!-- Book Image Script -->
+  <script>
+const books = [
+  { src: 'images/book1.jpg', title: 'Book Title 1' },
+  { src: 'images/book2.jpg', title: 'Book Title 2' },
+  { src: 'images/book3.jpg', title: 'Book Title 3' },
+  // Add more books as needed
+];
+
+let current = 0;
+function showNextBook() {
+  current = (current + 1) % books.length;
+  document.getElementById('book-image').src = books[current].src;
+  document.getElementById('book-title').innerText = books[current].title;
+}
+
+setInterval(showNextBook, 8000);
+</script>
+  
 </body>
 </html>
