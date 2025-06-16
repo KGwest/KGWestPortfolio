@@ -302,7 +302,7 @@ footer {
 }
 
 #floatingResume {
-  width: 100px;
+  width: 120px;
   position: absolute;
   top: 100%;
   left: 50%;
@@ -310,4 +310,5 @@ footer {
   cursor: pointer;
   animation: leafDrift 2s ease-in-out infinite;
   transition: top 2.2s ease-out, left 1.2s ease-in-out;
+  z-index: 40;
 }
