@@ -45,18 +45,31 @@ floatingResume.addEventListener("transitionend", () => {
 });
 
 function downloadResume(force = false) {
-  const link = document.createElement("a");
-  link.href = "RESUME.pdf";
-  link.download = "Kezia-West-Resume.pdf";
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
+  const resumeURL = "RESUME.pdf";
+
+  // Force download by navigating to it in a new tab
+  const a = document.createElement("a");
+  a.href = resumeURL;
+  a.setAttribute("download", "Kezia-West-Resume.pdf");
+  a.setAttribute("target", "_blank"); // Optional: opens in new tab
+
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
 
   if (force) {
-    alert("You gave it your best shot. Here's my resume - you've earned it!! ");
+    alert("You gave it your best shot. Here's my resume – you've earned it!!");
   } else {
     alert("Nice catch!");
   }
+
+  // Reset state
+  floatingResume.classList.add("hidden");
+  floatingResume.style.top = "100%";
+  floatingResume.style.left = "50%";
+  misses = 0;
+}
+
 
   // Reset state
   floatingResume.classList.add("hidden");
