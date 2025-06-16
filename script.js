@@ -5,20 +5,23 @@ const resumeButton = document.getElementById("resumeButton");
 const floatingResume = document.getElementById("floatingResume");
 
 function launchConfetti() {
+  console.log("Launching confetti!");
   if (window.confetti) {
     confetti({
       particleCount: 100,
       spread: 70,
       origin: { y: 0.6 },
     });
+  } else {
+    console.warn("Confetti library not loaded.");
   }
 }
 
 function launchResume() {
   floatingResume.classList.remove("hidden");
 
-  const topTarget = Math.random() * 50 + 10; // Between 10% and 60% of screen
-  const leftTarget = Math.random() * 80 + 10; // Between 10% and 90%
+  const topTarget = Math.random() * 50 + 10;
+  const leftTarget = Math.random() * 80 + 10;
 
   floatingResume.style.top = `${topTarget}%`;
   floatingResume.style.left = `${leftTarget}%`;
@@ -30,12 +33,10 @@ resumeButton.addEventListener("click", () => {
 });
 
 floatingResume.addEventListener("click", () => {
-  // success
   downloadResume();
 });
 
 floatingResume.addEventListener("transitionend", () => {
-  // If they didn't click it, increment miss
   misses++;
   if (misses >= 3) {
     downloadResume(true);
@@ -47,11 +48,10 @@ floatingResume.addEventListener("transitionend", () => {
 function downloadResume(force = false) {
   const resumeURL = "RESUME.pdf";
 
-  // Force download by navigating to it in a new tab
   const a = document.createElement("a");
   a.href = resumeURL;
   a.setAttribute("download", "Kezia-West-Resume.pdf");
-  a.setAttribute("target", "_blank"); // Optional: opens in new tab
+  a.setAttribute("target", "_blank");
 
   document.body.appendChild(a);
   a.click();
@@ -68,26 +68,4 @@ function downloadResume(force = false) {
   floatingResume.style.top = "100%";
   floatingResume.style.left = "50%";
   misses = 0;
-}
-
-
-  // Reset state
-  floatingResume.classList.add("hidden");
-  floatingResume.style.top = "100%";
-  floatingResume.style.left = "50%";
-  misses = 0;
-}
-
-
-function launchConfetti() {
-  console.log("Launching confetti!");
-  if (window.confetti) {
-    confetti({
-      particleCount: 100,
-      spread: 70,
-      origin: { y: 0.6 },
-    });
-  } else {
-    console.warn("Confetti library not loaded.");
-  }
 }
