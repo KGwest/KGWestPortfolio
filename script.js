@@ -46,7 +46,7 @@ floatingResume.addEventListener("transitionend", () => {
 
 function downloadResume(force = false) {
   const link = document.createElement("a");
-  link.href = "resume.pdf";
+  link.href = "RESUME.pdf";
   link.download = "Kezia-West-Resume.pdf";
   document.body.appendChild(link);
   link.click();
