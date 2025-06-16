@@ -1,3 +1,4 @@
+console.log("Script loaded!");
 
 let misses = 0;
 const resumeButton = document.getElementById("resumeButton");
