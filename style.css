@@ -137,10 +137,7 @@ section {
   text-decoration: none;
   height: 100%;
 }
-.project-thumb {
-  font-size: 2.5rem;
-  margin-top: 1rem;
-}
+
 
 .project-card:hover {
   background-color: #222;
@@ -247,6 +244,7 @@ footer {
   }
 }
 
+/* Books Section */
 .book-img {
   width: 160px;
   height: 240px;
@@ -255,6 +253,12 @@ footer {
   margin-left: auto;
   margin-right: auto;
   transition: transform 0.3s ease;
+}
+.my-books h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  font-size: 2.2rem;
 }
 
 .book-img:hover {
