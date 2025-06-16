@@ -1,6 +1,7 @@
 console.log("Script loaded!");
 
 let misses = 0;
+
 const resumeButton = document.getElementById("resumeButton");
 const floatingResume = document.getElementById("floatingResume");
 
@@ -20,8 +21,8 @@ function launchConfetti() {
 function launchResume() {
   floatingResume.classList.remove("hidden");
 
-  const topTarget = Math.random() * 50 + 10;
-  const leftTarget = Math.random() * 80 + 10;
+  const topTarget = Math.random() * 50 + 10; // Between 10% and 60%
+  const leftTarget = Math.random() * 80 + 10; // Between 10% and 90%
 
   floatingResume.style.top = `${topTarget}%`;
   floatingResume.style.left = `${leftTarget}%`;
@@ -46,7 +47,7 @@ floatingResume.addEventListener("transitionend", () => {
 });
 
 function downloadResume(force = false) {
-  const resumeURL = "RESUME.pdf";
+  const resumeURL = "RESUME.pdf"; // Make sure this matches the file name exactly
 
   const a = document.createElement("a");
   a.href = resumeURL;
