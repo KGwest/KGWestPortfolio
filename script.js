@@ -64,3 +64,17 @@ function downloadResume(force = false) {
   floatingResume.style.left = "50%";
   misses = 0;
 }
+
+
+function launchConfetti() {
+  console.log("Launching confetti!");
+  if (window.confetti) {
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+    });
+  } else {
+    console.warn("Confetti library not loaded.");
+  }
+}
