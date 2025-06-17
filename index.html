@@ -8,17 +8,33 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a id="top"></a>
+
   <!-- Navbar -->
 <nav class="bg-gray-900 text-white">
   <div class="max-w-5xl mx-auto flex items-center justify-between px-4 py-3">
     <span class="font-bold text-xl">Kezia West</span>
     <ul class="flex space-x-6">
+      <li><a href="#top" class="hover:text-indigo-400">Home</a></li>
       <li><a href="#about" class="hover:text-indigo-400">About</a></li>
       <li><a href="#projects" class="hover:text-indigo-400">Projects</a></li>
       <li><a href="#contact" class="hover:text-indigo-400">Contact</a></li>
     </ul>
   </div>
 </nav>
+  <!-- Hero Section -->
+  <section class="hero-section flex flex-col items-center justify-center text-center text-white py-24 px-4 relative">
+  <img src="hero-bg.png" alt="" class="hero-bg" aria-hidden="true" />
+  <div class="z-10">
+    <h1 class="text-5xl font-bold mb-4">
+      Hi, I'm Kezia — <span id="rotating-word" class="text-indigo-400">Linguist</span>
+    </h1>
+    <p class="text-xl max-w-2xl">Bridging language and technology through immersive design, smart systems, and human-first communication.</p>
+    <a href="#projects" class="mt-8 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-lg transition">
+      View My Projects
+    </a>
+  </div>
+</section>
 
   <!-- About Section -->
   <section id="about" class="about-section">
@@ -76,7 +92,7 @@
 
  <!-- Book Section -->
 <section id="books" class="my-books">
-   <img src="sky.gif" alt="" class="sky gif" aria-hidden="true">
+   <img src="sky.gif" alt="" class="sky-gif" aria-hidden="true">
   <h2>Books That I've Liked and I'm Sure Would Like Me Back</h2>
   <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
     <div class="book-card text-center">
@@ -143,7 +159,15 @@
 <!-- Javascript for Resume Button -->
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 <script src="script.js"></script>
+<script>
+  const words = ["Linguist", "Developer", "Builder", "Creative", "Analyst", "Connector", "UX Thinker"];
+  let index = 0;
 
+  setInterval(() => {
+    index = (index + 1) % words.length;
+    document.getElementById("rotating-word").textContent = words[index];
+  }, 4000); // rotates every 4 seconds
+</script>
   
 </body>
 </html>
