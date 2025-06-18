@@ -408,7 +408,7 @@ footer {
 
 /* 📊 Confett-o-meter */
 .confetti-meter {
-  width: 200px;
+  width: 220px;
   height: 10px;
   background: #333;
   border-radius: 6px;
@@ -416,13 +416,15 @@ footer {
   overflow: hidden;
   box-shadow: inset 0 0 4px #000;
   border: 1px solid #444;
+  z-index: 2;
+  position: relative;
 }
 
 .confetti-fill {
   height: 100%;
   width: 0%;
   background: linear-gradient(to right, #a78bfa, #f472b6);
-  transition: width 0.3s ease;
+  transition: width 0.4s ease-in-out;
 }
 
 /* ⚠️ Shake warning */
