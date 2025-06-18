@@ -1,10 +1,14 @@
 console.log("Script loaded!");
 
 let misses = 0;
+let resumeClicks = 0;
 
 const resumeButton = document.getElementById("resumeButton");
 const floatingResume = document.getElementById("floatingResume");
+const confettiFill = document.getElementById("confettiFill");
+const contactCard = document.querySelector(".contact-card");
 
+// 🎉 Confetti explosion on click
 function launchConfetti() {
   console.log("Launching confetti!");
   if (window.confetti) {
@@ -18,6 +22,7 @@ function launchConfetti() {
   }
 }
 
+// 📄 Floating resume effect
 function launchResume() {
   floatingResume.classList.remove("hidden");
 
@@ -28,15 +33,36 @@ function launchResume() {
   floatingResume.style.left = `${leftTarget}%`;
 }
 
+// 🖱️ Resume button click logic
 resumeButton.addEventListener("click", () => {
   launchConfetti();
   launchResume();
+
+  // 🧮 Update click count and confetti meter
+  resumeClicks++;
+  const fillPercent = Math.min(resumeClicks * 10, 100);
+  if (confettiFill) {
+    confettiFill.style.width = `${fillPercent}%`;
+  }
+
+  // ⚠️ Shake warning at 5 clicks
+  if (resumeClicks === 5) {
+    contactCard.classList.add("shake");
+    setTimeout(() => contactCard.classList.remove("shake"), 400);
+  }
+
+  // 🛑 Drop card at 10 clicks
+  if (resumeClicks >= 10 && !contactCard.classList.contains("fall-off")) {
+    contactCard.classList.add("fall-off");
+  }
 });
 
+// 🖱️ Clicking the floating resume
 floatingResume.addEventListener("click", () => {
   downloadResume();
 });
 
+// ⏳ When resume animation ends
 floatingResume.addEventListener("transitionend", () => {
   misses++;
   if (misses >= 3) {
@@ -46,8 +72,9 @@ floatingResume.addEventListener("transitionend", () => {
   }
 });
 
+// 💾 Trigger resume download
 function downloadResume(force = false) {
-  const resumeURL = "RESUME.pdf"; // Make sure this matches the file name exactly
+  const resumeURL = "RESUME.pdf"; // Make sure this matches the file name
 
   const a = document.createElement("a");
   a.href = resumeURL;
@@ -64,7 +91,7 @@ function downloadResume(force = false) {
     alert("Nice catch!");
   }
 
-  // Reset state
+  // Reset floating resume position
   floatingResume.classList.add("hidden");
   floatingResume.style.top = "100%";
   floatingResume.style.left = "50%";
