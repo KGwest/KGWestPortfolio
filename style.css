@@ -361,15 +361,14 @@ footer {
 /* Hook image styling for Contact Me section*/
 .hook-image {
   position: absolute;
-  top: -32px; /* move it just above the card */
+  top: -32px;
   left: 50%;
   transform: translateX(-50%);
   width: 50px;
-  opacity: 0.4;
-  z-index: 0; /* ❗ lower than the contact-card */
+  opacity: 0.5;
+  z-index: 0;
   pointer-events: none;
 }
-
 
 /* Drop-off animation for Contact Me section*/
 @keyframes dropOff {
