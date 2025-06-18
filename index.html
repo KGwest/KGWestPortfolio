@@ -37,20 +37,21 @@
   <section id="about" class="about-section">
     <div class="about-card">
       <h2>About Me</h2>
+<h2>About Me</h2>
 <p>
-  Hi, I’m Kezia—a linguist, creative technologist, and builder with a passion for bridging communication gaps through immersive design and smart systems. As a senior at UTA majoring in Linguistics with a Computer Science minor, I explore the intersection of language, AI, and digital accessibility.
+  I care deeply about language—how it moves, how it shapes us, and how it helps people navigate the systems they rely on. Whether I’m training AI models, designing educational tools, or building multilingual support systems, I bring curiosity, precision, and purpose to everything I create.
 </p>
 <br>
-      <p>
-  I’m especially fascinated by how machine learning can support language documentation and accessibility. I love learning about NLP tools like BRAT and PRAAT, exploring how Naive Bayes and Neural Nets can help analyze messy, real-world speech data, and understanding how accents and dialects reflect deeper cultural patterns. These kinds of problems light me up.
-</p>
-      <br>
 <p>
-  My projects include developing AI-powered web apps, training simulations, and ERP rollouts. I've helped customers with setting up websites and dashboards to monitor sales, keep track of inventory, and keep their customers up to date with new e-learning programs. I love helping people maximize opportunities by bringing their businesses online and fully visible with SEO Optimization. Whether I’m localizing content, analyzing speech patterns, or building tools that respond to how people <i>really</i> communicate (descriptive language over prescriptive language), I’m always looking for ways to make technology more human-centered.
+  I’m a senior at UTA majoring in Linguistics with a minor in Computer Science. My work includes ERP rollouts, immersive learning simulations, and an AI-powered language platform I pitched to the National Science Foundation. I build tools that are practical, usable, and clear.
 </p>
-      <br>
+<br>
 <p>
-  I’m bilingual in English and Spanish (heritage speaker of Español), conversational in Mandarin, and familiar with Korean. I thrive on interdisciplinary projects that combine linguistics, tech, and educational gaming to connect people and expand opportunity.
+  My experience spans backend logic and user-focused design. I prioritize heritage speakers, code-switchers, and multilingual users—people who live at the intersections of language and identity.
+</p>
+<br>
+<p>
+  I design for connection, accessibility, and ease. Technology should fit into everyday life and make it <i id="word-flash" class="text-indigo-300">better</i>.
 </p>
     </div>
   </section>
@@ -167,6 +168,17 @@
     index = (index + 1) % words.length;
     document.getElementById("rotating-word").textContent = words[index];
   }, 4000); // rotates every 4 seconds
+</script>
+
+  <script>
+  const flashWords = ["better", "richer", "lovelier", "clearer", "more human"];
+  let flashIndex = 0;
+  const flashEl = document.getElementById("word-flash");
+
+  setInterval(() => {
+    flashIndex = (flashIndex + 1) % flashWords.length;
+    flashEl.textContent = flashWords[flashIndex];
+  }, 3000);
 </script>
   
 </body>
