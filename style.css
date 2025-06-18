@@ -15,9 +15,17 @@ html, body {
   color: var(--white);
   min-height: 100vh;
 }
+
+body, p {
+  font-family: 'Oxygen', sans-serif;
+}
 html {
     scroll-behavior: smooth;
   }
+
+h2 {
+  font-family: 'Ubuntu', sans-serif;
+}
 
 #rotating-word {
   transition: opacity 0.5s ease;
@@ -26,7 +34,27 @@ html {
   opacity: 0;
 }
 
+
 /* Navbar */
+
+nav {
+  font-family: 'Ubuntu', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+nav span {
+  font-family: 'Annie Use Your Telescope', 'Comic Sans MS', 'Segoe Print', cursive;
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: #a78bfa; /* soft indigo */
+}
+
+nav a {
+  font-family: 'Ubuntu', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  transition: color 0.3s ease;
+}
+
 .navbar {
   width: 100%;
   position: fixed;
@@ -90,6 +118,10 @@ section {
   object-fit: cover;
   z-index: -1;
   opacity: 0.3;
+}
+
+.hero-section h1 {
+  font-family: 'Annie Use Your Telescope', cursive;
 }
 
 /* About Section */
