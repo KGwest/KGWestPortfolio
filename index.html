@@ -135,6 +135,9 @@
         <button type="submit">Send</button>
       </form>
     </div>
+
+      <!-- Mounting hook behind contact card -->
+  <img src="hook.png" alt="Mounting Hook" class="hook-image" />
   </section>
 
   <!-- Resume Mini-Game -->
@@ -179,6 +182,19 @@
     flashIndex = (flashIndex + 1) % flashWords.length;
     flashEl.textContent = flashWords[flashIndex];
   }, 3000);
+</script>
+  <script>
+  // 🎯 Resume button click drop logic
+  let resumeClicks = 0;
+  const contactCard = document.querySelector('.contact-card');
+  const resumeButton = document.getElementById('resumeButton');
+
+  resumeButton.addEventListener('click', () => {
+    resumeClicks++;
+    if (resumeClicks >= 10 && !contactCard.classList.contains('fall-off')) {
+      contactCard.classList.add('fall-off');
+    }
+  });
 </script>
   
 </body>
