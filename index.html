@@ -139,6 +139,13 @@
       <!-- Mounting hook behind contact card -->
   <img src="hook.png" alt="Mounting Hook" class="hook-image" />
   </section>
+<!-- 🎉 Confetti Pile Visual -->
+<div class="confetti-pile"></div>
+
+<!-- 📊 Confett-o-meter -->
+<div class="confetti-meter">
+  <div class="confetti-fill" id="confettiFill"></div>
+</div>
 
   <!-- Resume Mini-Game -->
 <section class="resume-section flex flex-col items-center justify-center my-12">
@@ -183,19 +190,33 @@
     flashEl.textContent = flashWords[flashIndex];
   }, 3000);
 </script>
-  <script>
-  // 🎯 Resume button click drop logic
+<script>
+  // 🎯 Resume button click logic w/ confetti meter + animation
   let resumeClicks = 0;
   const contactCard = document.querySelector('.contact-card');
   const resumeButton = document.getElementById('resumeButton');
+  const confettiFill = document.getElementById('confettiFill');
 
   resumeButton.addEventListener('click', () => {
     resumeClicks++;
+
+    // Update confett-o-meter
+    const fillPercent = Math.min(resumeClicks * 10, 100);
+    confettiFill.style.width = `${fillPercent}%`;
+
+    // Shake effect at click 5
+    if (resumeClicks === 5) {
+      contactCard.classList.add('shake');
+      setTimeout(() => contactCard.classList.remove('shake'), 400);
+    }
+
+    // Drop-off at click 10
     if (resumeClicks >= 10 && !contactCard.classList.contains('fall-off')) {
       contactCard.classList.add('fall-off');
     }
   });
 </script>
+
   
 </body>
 </html>
