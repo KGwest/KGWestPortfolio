@@ -357,3 +357,34 @@ footer {
   transition: top 2.2s ease-out, left 1.2s ease-in-out;
   z-index: 40;
 }
+
+/* Hook image styling for Contact Me section*/
+.hook-image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+/* Drop-off animation for Contact Me section*/
+@keyframes dropOff {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  40% {
+    transform: translateY(60px) rotate(2deg);
+  }
+  100% {
+    transform: translateY(160vh) rotate(12deg);
+    opacity: 0;
+  }
+}
+
+.fall-off {
+  animation: dropOff 2.2s ease-in-out forwards;
+  pointer-events: none;
+}
+
