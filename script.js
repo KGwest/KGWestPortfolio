@@ -74,7 +74,7 @@ floatingResume.addEventListener("transitionend", () => {
 
 // 💾 Trigger resume download
 function downloadResume(force = false) {
-  const resumeURL = "RESUME.pdf"; // Make sure this matches the file name
+  const resumeURL = "assets/RESUME.pdf"; // Make sure this matches the file name
 
   const a = document.createElement("a");
   a.href = resumeURL;
