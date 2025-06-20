@@ -25,7 +25,6 @@
 </nav>
   <!-- Hero Section -->
   <section class="hero-section flex flex-col items-center justify-center text-center text-white py-24 px-4 relative">
-  <img src="hero-bg.png" alt="" class="hero-bg" aria-hidden="true" />
   <div class="z-10">
     <h1 class="text-5xl font-bold mb-4">
       Hi, I'm Kezia and I am <span id="rotating-word" class="text-indigo-400">a Linguist</span>
@@ -122,23 +121,25 @@
   </div>
 </section>
 
+<!-- Contact Section with Hook Behind -->
+<section id="contact" class="contact-section relative">
+  <!-- Hook Background -->
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact-section">
-    <div class="contact-card">
-      <h2>Contact</h2>
-      <form onsubmit="event.preventDefault(); alert(`Thanks for reaching out!\n\nPsych! This button doesn't lead anywhere just yet 🤪\n\nBut you can email me at kgracewest@gmail.com if you'd like to chat.\n\nCheers!`); this.reset();">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </div>
+  <!-- Contact Card -->
+  <div class="contact-card">
+    <h2>Contact</h2>
+    <form onsubmit="event.preventDefault(); alert(...); this.reset();">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</section>
 
-      <!-- Mounting hook behind contact card -->
-  <img src="assets/hook-transparent.png" alt="Mounting Hook" class="hook-image" />
-  </section>
-<!-- 🎉 Confetti Pile Visual -->
+
+
+<!-- Confetti Pile Visual -->
 <div class="confetti-pile"></div>
 
 
@@ -147,11 +148,11 @@
 <section class="resume-section flex flex-col items-center justify-center my-12">
   <p class="text-white text-sm mb-2"> Just before you go, click the button below. <br> Once. <br>  Twice.<br> Until your heart's content. <br> Have at it! </p>
 
-  <!-- 📊 Confett-o-meter -->
+  <!-- Confett-o-meter -->
 <div class="confetti-meter">
   <div class="confetti-fill" id="confettiFill"></div>
 </div>
-   <!-- 🎉 Confetti pile visual (optional underneath effect) -->
+   <!-- Confetti pile visual (optional underneath effect) -->
   <div class="confetti-pile"></div>
 <br>
   <br>
@@ -233,6 +234,7 @@
     }
   });
 </script>
+
 
   
 </body>
