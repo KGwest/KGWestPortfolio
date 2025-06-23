@@ -101,6 +101,7 @@ section {
   padding: 7rem 0 3.5rem 0;
   position: relative;
   z-index: 1;
+  
 }
 
 /* Hero Section */
@@ -133,6 +134,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 1.5rem
 }
 .about-card {
   position: relative;
@@ -351,7 +353,11 @@ footer {
 }
 
 #floatingResume {
-  width: 120px;
+  display: none;              /* Hidden by default, shown by JS */
+  width: 120px !important;    /* Override Tailwind, keep it tidy */
+  height: auto !important;
+  max-width: 90vw;            /* Prevents overflow on mobile */
+  max-height: 80vh;           /* Keeps it visible in the viewport */
   position: absolute;
   top: 100%;
   left: 50%;
@@ -360,7 +366,12 @@ footer {
   animation: leafDrift 2s ease-in-out infinite;
   transition: top 2.2s ease-out, left 1.2s ease-in-out;
   z-index: 40;
+  box-shadow: 0 8px 40px 0 #0007;
+  border-radius: 0.7rem;
+  background: #fff;
+  object-fit: contain;
 }
+
 
 /* Hook image styling for Contact Me section*/
 .hook-image {
@@ -461,4 +472,12 @@ footer {
   animation: shake 0.4s ease;
 }
 
+@media (max-width: 600px) {
+  #floatingResume {
+    width: 70vw !important;
+    max-width: 94vw;
+    min-width: 60px;
+    max-height: 50vw;
+  }
+}
 

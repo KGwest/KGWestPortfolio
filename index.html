@@ -1,250 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Kezia West | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Preconnect to Google Fonts and TailwindCDN -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Preloading Hero Font for Lighthouse Report-->
-  <link rel="preload" as="font" href="https://fonts.gstatic.com/s/annieuseyourtelescope/v20/pe0zMJCIMIsBjFxqYBIcZ6_OI5oFHCY.woff2" type="font/woff2" crossorigin>
-  <!-- Google Fonts with font-display: swap -->
-  <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Oxygen&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
-  <!-- TailwindCSS (loaded async with fallback) -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
-
-  
-  <link rel="stylesheet" href="style.css">
-  
-</head>
-<body>
-  <a id="top"></a>
-
-  <!-- Navbar -->
-<nav class="bg-gray-900 text-white">
-  <div class="max-w-5xl mx-auto flex items-center justify-between px-4 py-3">
-    <span class="font-bold text-xl">Kezia West</span>
-    <ul class="flex space-x-6">
-      <li><a href="#top" class="hover:text-indigo-400">Home</a></li>
-      <li><a href="#about" class="hover:text-indigo-400">About</a></li>
-      <li><a href="#projects" class="hover:text-indigo-400">Projects</a></li>
-      <li><a href="#books" class="hover:text-indigo-400">Books</a></li>
-      <li><a href="#contact" class="hover:text-indigo-400">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-  <!-- Hero Section -->
-  <section class="hero-section flex flex-col items-center justify-center text-center text-white py-24 px-4 relative">
-  <div class="z-10">
-    <h1 class="text-5xl font-bold mb-4">
-      Hi, I'm Kezia and I am <span id="rotating-word" class="text-indigo-400">a Linguist</span>
-    </h1>
-  </div>
-</section>
-
-  <!-- About Section -->
-  <section id="about" class="about-section">
-    <div class="about-card">
-<h2>About Me</h2>
-<p>
-  I care deeply about language—how it moves, how it shapes us, and how it helps people navigate the systems they rely on. Whether I’m training AI models, designing educational tools, or building multilingual support systems, I bring curiosity, precision, and purpose to everything I create.
-</p>
-<br>
-<p>
-  I’m a senior at UTA majoring in Linguistics with a minor in Computer Science. My work includes ERP rollouts, immersive learning simulations, and an AI-powered language platform I pitched to the National Science Foundation. I build tools that are practical, usable, and clear.
-</p>
-<br>
-<p>
-  My experience spans backend logic and user-focused design. I prioritize heritage speakers, code-switchers, and multilingual users—people who live at the intersections of language and identity.
-</p>
-<br>
-<p>
-  I design for connection, accessibility, and ease. Technology should fit into everyday life and make it <i id="word-flash" class="text-indigo-300">better</i>.
-</p>
-    </div>
-
-    <a href="#books" class="underline text-indigo-300 hover:text-indigo-400">See My Bookshelf ↓</a>
-
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="projects-section">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-   <div class="project-card">
-      <a href="https://kgwest.github.io/g-u-e-s-s/" target="_blank" rel="noopener noreferrer">
-        <h3>G-U-E-S-S (Association Game)</h3> 
-        <br>
-        <br>
-        <p>A guessing game where you try to find the AI's secret word by association. I'm still working on this interface and game logic. Functionality is present. I love games and want to continue building ones out that operate as functional tools that could serve as a data pipeline for training systems to accommodate people and to give people more knowledge and joy. </p>
-
-      </a>
-    </div>
-
-    <div class="project-card">
-      <a href="https://kgwest.github.io/IPACUPTOSSGAME/" target="_blank" rel="noopener noreferrer">
-        <h3>IPA Cup Toss</h3>
-        <br>
-        <br>
-        <p>Guess which IPA (International Phonetic Alphabet) symbol links the words. Score for a chance to toss a ball in a cup! It's a study tool for those early in their Linguistics studies or people who want to refresh their knowledge in an amusing way. I know I'm gonna need it hahaha! I'm expanding the scope of the IPA cards as I go. </p>
-      
-      </a>
-    </div>
-
-    <div class="project-card">
-      <a href="https://kgwest.github.io/reward_generator/" target="_blank" rel="noopener noreferrer">
-        <h3>Reward Generator</h3>
-        <br>
-        <br>
-        <p>A fun mental health app that awards surprise treats. I worked on this one during my internship in the Summer of 2025. It's got lots of confetti - could you tell that I really, <b>really</b> like confetti? JavaScript indulges me so much :P </p>
- 
-      </a>
-    </div>
-    </div>
-  </section>
-
- <!-- Book Section -->
-<section id="books" class="my-books">
-  <h2>Books That I've Liked and I'm Sure Would Like Me Back</h2>
-  <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-    <div class="book-card text-center">
-    <picture>
-      <source srcset="assets/a_tale_for_the_time_being.webp" type="image/webp">
-      <source srcset="assets/a_tale_for_the_time_being.jpg" type="image/jpeg">
-      <img src="assets/a_tale_for_the_time_being.jpg" alt="Book Cover" class="book-img" loading="lazy" width="200" height="300">
-    </picture>
-      <p class="mt-2 text-white">A Tale for the Time Being by Ruth Ozeki</p>
-    </div>
-    
-    <div class="book-card text-center">
-      <picture>
-        <source srcset="assets/collected_poems.webp" type="image/webp">
-        <source srcset="assets/collected_poems.jpg" type="image/jpeg">
-        <img src="assets/collected_poems.jpg" alt="Book Cover" class="book-img" loading="lazy" width="200" height="300">
-      </picture>
-        <p class="mt-2 text-white">The Collected Poems of Muriel Rukeyser Edited by Janet E. Kaufman & Anne F. Herzog <br> with Jan Heller Levi</p>
-    </div>
-    
-    <div class="book-card text-center">
-      <picture>
-        <source srcset="assets/virtue_of_selfishness.webp" type="image/webp">
-        <source srcset="assets/virtue_of_selfishness.jpg" type="image/jpeg">
-        <img src="assets/virtue_of_selfishness.jpg" alt="Book Cover" class="book-img" loading="lazy" width="200" height="300">
-      </picture>   
-        <p class="mt-2 text-white">The Virtue of Selfishness by Ayn Rand</p>
-    </div>
-    
-    <div class="book-card text-center">
-      <picture>
-        <source srcset="assets/pendulum.webp" type="image/webp">
-        <source srcset="assets/pendulum.jpg" type="image/jpeg">
-        <img src="assets/pendulum.jpg" alt="Book Cover" class="book-img" loading="lazy" width="200" height="300">
-      </picture>         
-        <p class="mt-2 text-white">Pendulum by Roy H. Williams and Michael R. Drew</p>
-    </div>
-    
-    <div class="book-card text-center">
-      <picture>
-        <source srcset="assets/english_with_an_accent.webp" type="image/webp">
-        <source srcset="assets/english_with_an_accent.jpg" type="image/jpeg">
-        <img src="assets/english_with_an_accent.jpg" alt="Book Cover" class="book-img" loading="lazy" width="200" height="300">
-      </picture>         
-        <p class="mt-2 text-white">English with an Accent by Rosina Lippi-Green</p>
-    </div>
-    
-    <div class="book-card text-center">
-      <picture>
-        <source srcset="assets/Italo_Calvino_IUAWNAT.webp" type="image/webp">
-        <source srcset="assets/Italo_Calvino_IUAWNAT.jpg" type="image/jpeg">
-        <img src="assets/Italo_Calvino_IUAWNAT.jpg" alt="Book Cover" class="book-img" loading="lazy" width="200" height="300">
-      </picture>         
-          <p class="mt-2 text-white">If on a Winter's Night a Traveler by Italo Calvino</p>
-    </div>
-    
-  </div>
-</section>
-
-<!-- Contact Section with Hook Behind -->
-<section id="contact" class="contact-section relative">
-  <!-- Hook Background -->
-
-  <!-- Contact Card -->
-  <div class="contact-card">
-    <h2>Contact</h2>
-    <form onsubmit="event.preventDefault(); alert(...); this.reset();">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </div>
-</section>
-
-
-
-<!-- Resume Mini-Game Section -->
-<section class="resume-section flex flex-col items-center justify-center py-16 text-center space-y-6">
-  <!-- Confetti Pile Visual -->
-  <div class="confetti-pile"></div>
-
-  <!-- Instructions -->
-  <p class="text-white text-sm max-w-md leading-relaxed">
-    Just before you go, click the button below. <br>
-    Once. <br>
-    Twice. <br>
-    Until your heart's content. <br>
-    Have at it!
-  </p>
-
-  <!-- Confetti Meter -->
-  <div class="w-64 h-2 bg-gray-700 rounded-full overflow-hidden">
-    <div class="h-full bg-gradient-to-r from-pink-500 to-yellow-300 transition-all duration-500" id="confettiFill"></div>
-  </div>
-
-  <!-- Resume Button -->
-  <button id="resumeButton" class="px-6 py-3 bg-blue-700 text-white rounded-lg text-lg hover:bg-blue-800 transition">
-    Get My Resume
-  </button>
-
-  <!-- Resume Preview -->
-  <picture>
-    <source srcset="assets/resume-thumb.webp" type="image/webp">
-    <source srcset="assets/resume-thumb.png" type="image/png">
-    <img 
-      src="assets/resume-thumb.png" 
-      alt="Floating Resume" 
-      id="floatingResume" 
-      class="hidden w-48 sm:w-64 md:w-72 rounded-lg shadow-lg mt-4" 
-      loading="lazy" 
-      width="200" 
-      height="260"
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kezia West | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Preconnect to Google Fonts and TailwindCDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Preloading Hero Font for Lighthouse Report-->
+    <link
+      rel="preload"
+      as="font"
+      href="https://fonts.gstatic.com/s/annieuseyourtelescope/v20/pe0zMJCIMIsBjFxqYBIcZ6_OI5oFHCY.woff2"
+      type="font/woff2"
+      crossorigin
     />
-  </picture>
-</section>
+    <!-- Google Fonts with font-display: swap -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Oxygen&family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- TailwindCSS (loaded async with fallback) -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a id="top"></a>
 
-  
-  <!-- Footer -->
-<footer class="text-center text-white mt-8 mb-4 text-sm">
-  © 2025 Kezia West •
-  <a href="https://www.linkedin.com/in/kgwest" target="_blank" class="underline text-blue-400 hover:text-blue-300">
-    LinkedIn
-  </a> •
-  <a href="https://github.com/KGwest" target="_blank" class="underline text-blue-400 hover:text-blue-300">
-    GitHub
-  </a>
-</footer>
+    <!-- Navbar -->
+    <nav class="bg-gray-900 text-white">
+      <div
+        class="max-w-5xl mx-auto flex items-center justify-between px-4 py-3"
+      >
+        <span class="font-bold text-xl">Kezia West</span>
+        <ul class="flex space-x-6 list-none p-0 m-0">
+          <li><a href="#top" class="hover:text-indigo-400">Home</a></li>
+          <li><a href="#about" class="hover:text-indigo-400">About</a></li>
+          <li>
+            <a href="#projects" class="hover:text-indigo-400">Projects</a>
+          </li>
+          <li><a href="#books" class="hover:text-indigo-400">Books</a></li>
+          <li><a href="#contact" class="hover:text-indigo-400">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section
+      class="hero-section flex flex-col items-center justify-center text-center text-white py-24 px-4 relative"
+    >
+      <div class="z-10">
+        <h1 class="text-5xl font-bold mb-4">
+          Hi, <br> I'm Kezia  and I am  <br>
+          <span id="rotating-word" class="text-indigo-400">a Linguist</span>
+        </h1>
+      </div>
+    </section>
 
-<!-- External Confetti Library -->
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js" defer></script>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="about-card">
+        <h2>About Me</h2>
+        <p>
+          I care deeply about language—how it moves, how it shapes us, and how
+          it helps people navigate the systems they rely on. Whether I’m
+          training AI models, designing educational tools, or building
+          multilingual support systems, I bring curiosity, precision, and
+          purpose to everything I create.
+        </p>
+        <br />
+        <p>
+          I’m a senior at UTA majoring in Linguistics with a minor in Computer
+          Science. My work includes ERP rollouts, immersive learning
+          simulations, and an AI-powered language platform I pitched to the
+          National Science Foundation. I build tools that are practical, usable,
+          and clear.
+        </p>
+        <br />
+        <p>
+          My experience spans backend logic and user-focused design. I
+          prioritize heritage speakers, code-switchers, and multilingual
+          users—people who live at the intersections of language and identity.
+        </p>
+        <br />
+        <p>
+          I design for connection, accessibility, and ease. Technology should
+          fit into everyday life and make it
+          <i id="word-flash" class="text-indigo-300">better</i>.
+        </p>
 
+        <div class="text-center mt-4">
+          <a
+            href="#books"
+            class="underline text-indigo-300 hover:text-indigo-400"
+            >See My Bookshelf ↓</a
+          >
+        </div>
+      </div>
+    </section>
 
-<!-- My JS -->
-<script src="script.js" defer></script>
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <a
+            href="https://kgwest.github.io/g-u-e-s-s/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h3>G-U-E-S-S (Association Game)</h3>
+            <br />
+            <br />
+            <p>
+              A guessing game where you try to find the AI's secret word by
+              association. I'm still working on this interface and game logic.
+              Functionality is present. I love games and want to continue
+              building ones out that operate as functional tools that could
+              serve as a data pipeline for training systems to accommodate
+              people and to give people more knowledge and joy.
+            </p>
+          </a>
+        </div>
 
+        <div class="project-card">
+          <a
+            href="https://kgwest.github.io/IPACUPTOSSGAME/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h3>IPA Cup Toss</h3>
+            <br />
+            <br />
+            <p>
+              Guess which IPA (International Phonetic Alphabet) symbol links the
+              words. Score for a chance to toss a ball in a cup! It's a study
+              tool for those early in their Linguistics studies or people who
+              want to refresh their knowledge in an amusing way. I know I'm
+              gonna need it hahaha! I'm expanding the scope of the IPA cards as
+              I go.
+            </p>
+          </a>
+        </div>
 
-  
-</body>
+        <div class="project-card">
+          <a
+            href="https://kgwest.github.io/reward_generator/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h3>Reward Generator</h3>
+            <br />
+            <br />
+            <p>
+              A fun mental health app that awards surprise treats. I worked on
+              this one during my internship in the Summer of 2025. It's got lots
+              of confetti - could you tell that I really, <b>really</b> like
+              confetti? JavaScript indulges me so much :P
+            </p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Book Section -->
+    <section id="books" class="my-books">
+      <h2>Books That I've Liked and I'm Sure Would Like Me Back</h2>
+      <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+        <div class="book-card text-center">
+          <picture>
+            <source
+              srcset="assets/a_tale_for_the_time_being.webp"
+              type="image/webp"
+            />
+            <source
+              srcset="assets/a_tale_for_the_time_being.jpg"
+              type="image/jpeg"
+            />
+            <img
+              src="assets/a_tale_for_the_time_being.jpg"
+              alt="Book Cover"
+              class="book-img"
+              loading="lazy"
+              width="200"
+              height="300"
+            />
+          </picture>
+          <p class="mt-2 text-white">A Tale for the Time Being by Ruth Ozeki</p>
+        </div>
+
+        <div class="book-card text-center">
+          <picture>
+            <source srcset="assets/collected_poems.webp" type="image/webp" />
+            <source srcset="assets/collected_poems.jpg" type="image/jpeg" />
+            <img
+              src="assets/collected_poems.jpg"
+              alt="Book Cover"
+              class="book-img"
+              loading="lazy"
+              width="200"
+              height="300"
+            />
+          </picture>
+          <p class="mt-2 text-white">
+            The Collected Poems of Muriel Rukeyser Edited by Janet E. Kaufman &
+            Anne F. Herzog <br />
+            with Jan Heller Levi
+          </p>
+        </div>
+
+        <div class="book-card text-center">
+          <picture>
+            <source
+              srcset="assets/virtue_of_selfishness.webp"
+              type="image/webp"
+            />
+            <source
+              srcset="assets/virtue_of_selfishness.jpg"
+              type="image/jpeg"
+            />
+            <img
+              src="assets/virtue_of_selfishness.jpg"
+              alt="Book Cover"
+              class="book-img"
+              loading="lazy"
+              width="200"
+              height="300"
+            />
+          </picture>
+          <p class="mt-2 text-white">The Virtue of Selfishness by Ayn Rand</p>
+        </div>
+
+        <div class="book-card text-center">
+          <picture>
+            <source srcset="assets/pendulum.webp" type="image/webp" />
+            <source srcset="assets/pendulum.jpg" type="image/jpeg" />
+            <img
+              src="assets/pendulum.jpg"
+              alt="Book Cover"
+              class="book-img"
+              loading="lazy"
+              width="200"
+              height="300"
+            />
+          </picture>
+          <p class="mt-2 text-white">
+            Pendulum by Roy H. Williams and Michael R. Drew
+          </p>
+        </div>
+
+        <div class="book-card text-center">
+          <picture>
+            <source
+              srcset="assets/english_with_an_accent.webp"
+              type="image/webp"
+            />
+            <source
+              srcset="assets/english_with_an_accent.jpg"
+              type="image/jpeg"
+            />
+            <img
+              src="assets/english_with_an_accent.jpg"
+              alt="Book Cover"
+              class="book-img"
+              loading="lazy"
+              width="200"
+              height="300"
+            />
+          </picture>
+          <p class="mt-2 text-white">
+            English with an Accent by Rosina Lippi-Green
+          </p>
+        </div>
+
+        <div class="book-card text-center">
+          <picture>
+            <source
+              srcset="assets/Italo_Calvino_IUAWNAT.webp"
+              type="image/webp"
+            />
+            <source
+              srcset="assets/Italo_Calvino_IUAWNAT.jpg"
+              type="image/jpeg"
+            />
+            <img
+              src="assets/Italo_Calvino_IUAWNAT.jpg"
+              alt="Book Cover"
+              class="book-img"
+              loading="lazy"
+              width="200"
+              height="300"
+            />
+          </picture>
+          <p class="mt-2 text-white">
+            If on a Winter's Night a Traveler by Italo Calvino
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section with Hook Behind -->
+    <section id="contact" class="contact-section relative">
+      <!-- Hook Background -->
+
+      <!-- Contact Card -->
+      <div class="contact-card">
+        <h2>Contact</h2>
+        <form onsubmit="event.preventDefault(); alert(...); this.reset();">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="4"
+            required
+          ></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Resume Mini-Game Section -->
+    <section
+      class="resume-section flex flex-col items-center justify-center py-16 text-center space-y-6"
+    >
+      <!-- Confetti Pile Visual -->
+      <div class="confetti-pile"></div>
+
+      <p class="text-white text-sm max-w-md leading-relaxed">
+        Just before you go, click the button below. <br />
+        Once. <br />
+        Twice. <br />
+        Until your heart's content. <br />
+        Have at it!
+      </p>
+
+      <!-- Confetti Meter -->
+      <div class="confetti-meter">
+        <div class="confetti-fill" id="confettiFill"></div>
+      </div>
+
+      <button
+        id="resumeButton"
+        class="px-6 py-3 bg-blue-700 text-white rounded-lg text-lg hover:bg-blue-800 transition"
+      >
+        Get My Resume
+      </button>
+
+      <picture>
+        <source srcset="assets/resume-thumb.webp" type="image/webp" />
+        <source srcset="assets/resume-thumb.png" type="image/png" />
+        <img
+          src="assets/resume-thumb.png"
+          alt="Floating Resume"
+          id="floatingResume"
+          loading="lazy"
+          width="200"
+          height="260"
+        />
+      </picture>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-white mt-8 mb-4 text-sm">
+      © 2025 Kezia West •
+      <a
+        href="https://www.linkedin.com/in/kgwest"
+        target="_blank"
+        class="underline text-blue-400 hover:text-blue-300"
+      >
+        LinkedIn
+      </a>
+      •
+      <a
+        href="https://github.com/KGwest"
+        target="_blank"
+        class="underline text-blue-400 hover:text-blue-300"
+      >
+        GitHub
+      </a>
+    </footer>
+
+    <!-- External Confetti Library -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"
+      async
+    ></script>
+
+    <!-- My JS -->
+    <script src="script.js" defer></script>
+  </body>
 </html>

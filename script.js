@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // --- Hero rotating word logic ---
   const words = [
     "a Linguist",
     "an AI Trainer",
@@ -11,16 +12,14 @@ document.addEventListener("DOMContentLoaded", () => {
     "a Gamer",
     "a Localization-Minded Storyteller"
   ];
-
   let index = 0;
   setInterval(() => {
     index = (index + 1) % words.length;
     const rotatingWord = document.getElementById("rotating-word");
-    if (rotatingWord) {
-      rotatingWord.textContent = words[index];
-    }
+    if (rotatingWord) rotatingWord.textContent = words[index];
   }, 4000);
 
+  // --- Flashing word logic ---
   const flashWords = ["better", "richer", "lovelier", "clearer", "more human"];
   let flashIndex = 0;
   const flashEl = document.getElementById("word-flash");
@@ -31,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 3000);
   }
 
-  // Resume Confetti Logic
+  // --- Resume Confetti Mini-Game Logic ---
   let resumeClicks = 0;
   let misses = 0;
 
@@ -39,6 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const floatingResume = document.getElementById("floatingResume");
   const confettiFill = document.getElementById("confettiFill");
   const contactCard = document.querySelector(".contact-card");
+
+  // Always hide floatingResume on load
+  if (floatingResume) floatingResume.style.display = "none";
 
   function launchConfetti() {
     if (window.confetti) {
@@ -54,7 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function launchResume() {
     if (!floatingResume) return;
-    floatingResume.classList.remove("hidden");
+    floatingResume.style.display = "block";
+    // Randomize position
     floatingResume.style.top = `${50 * Math.random() + 10}%`;
     floatingResume.style.left = `${80 * Math.random() + 10}%`;
   }
@@ -68,14 +71,14 @@ document.addEventListener("DOMContentLoaded", () => {
     link.click();
     document.body.removeChild(link);
 
-    if (autoDownload) {
-      alert("You gave it your best shot. Here's my resume – you've earned it!!");
-    } else {
-      alert("Nice catch!");
-    }
+    alert(
+      autoDownload
+        ? "You gave it your best shot. Here's my resume – you've earned it!!"
+        : "Nice catch!"
+    );
 
     if (floatingResume) {
-      floatingResume.classList.add("hidden");
+      floatingResume.style.display = "none";
       floatingResume.style.top = "100%";
       floatingResume.style.left = "50%";
     }
@@ -89,6 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
       launchConfetti();
       launchResume();
 
+      // Confetti meter update
       if (confettiFill) {
         const percent = Math.min(resumeClicks * 10, 100);
         confettiFill.style.width = `${percent}%`;
@@ -99,7 +103,11 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => contactCard.classList.remove("shake"), 400);
       }
 
-      if (resumeClicks >= 10 && contactCard && !contactCard.classList.contains("fall-off")) {
+      if (
+        resumeClicks >= 10 &&
+        contactCard &&
+        !contactCard.classList.contains("fall-off")
+      ) {
         contactCard.classList.add("fall-off");
       }
     });
@@ -112,3 +120,11 @@ document.addEventListener("DOMContentLoaded", () => {
       misses++;
       if (misses >= 3) {
         downloadResume(true);
+      } else {
+        floatingResume.style.display = "none";
+      }
+    });
+  }
+
+  console.log("script.js loaded");
+});
