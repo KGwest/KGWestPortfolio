@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "a Creative Technologist",
     "a Language-to-Code Translator",
     "a Gamer",
-    "a Localization-Minded Storyteller"
+    "a Localization-Minded Storyteller",
   ];
   let index = 0;
   setInterval(() => {
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
       confetti({
         particleCount: 100,
         spread: 70,
-        origin: { y: 0.6 }
+        origin: { y: 0.6 },
       });
     } else {
       console.warn("Confetti library not loaded.");
@@ -70,6 +70,15 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+
+    // Show celebration GIF here
+    const celebrationGif = document.getElementById("celebrationGif");
+    if (celebrationGif) {
+      celebrationGif.style.display = "block";
+      setTimeout(() => {
+        celebrationGif.style.display = "none";
+      }, 2200);
+    }
 
     alert(
       autoDownload
