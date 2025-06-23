@@ -183,33 +183,46 @@
 
 
 
-<!-- Confetti Pile Visual -->
-<div class="confetti-pile"></div>
-
-
-
-  <!-- Resume Mini-Game -->
-<section class="resume-section flex flex-col items-center justify-center my-12">
-  <p class="text-white text-sm mb-2"> Just before you go, click the button below. <br> Once. <br>  Twice.<br> Until your heart's content. <br> Have at it! </p>
-
-  <!-- Confett-o-meter -->
-<div class="confetti-meter">
-  <div class="confetti-fill" id="confettiFill"></div>
-</div>
-   <!-- Confetti pile visual (optional underneath effect) -->
+<!-- Resume Mini-Game Section -->
+<section class="resume-section flex flex-col items-center justify-center py-16 text-center space-y-6">
+  <!-- Confetti Pile Visual -->
   <div class="confetti-pile"></div>
-<br>
-  <br>
 
+  <!-- Instructions -->
+  <p class="text-white text-sm max-w-md leading-relaxed">
+    Just before you go, click the button below. <br>
+    Once. <br>
+    Twice. <br>
+    Until your heart's content. <br>
+    Have at it!
+  </p>
+
+  <!-- Confetti Meter -->
+  <div class="w-64 h-2 bg-gray-700 rounded-full overflow-hidden">
+    <div class="h-full bg-gradient-to-r from-pink-500 to-yellow-300 transition-all duration-500" id="confettiFill"></div>
+  </div>
+
+  <!-- Resume Button -->
   <button id="resumeButton" class="px-6 py-3 bg-blue-700 text-white rounded-lg text-lg hover:bg-blue-800 transition">
     Get My Resume
   </button>
-    <picture>
-      <source srcset="assets/resume-thumb.webp" type="image/webp">
-      <source srcset="assets/resume-thumb.png" type="image/png">
-      <img src="assets/resume-thumb.png" alt="Floating Resume" id="floatingResume" class="hidden mt-6" loading="lazy" width="200" height="260" />
-    </picture>
+
+  <!-- Resume Preview -->
+  <picture>
+    <source srcset="assets/resume-thumb.webp" type="image/webp">
+    <source srcset="assets/resume-thumb.png" type="image/png">
+    <img 
+      src="assets/resume-thumb.png" 
+      alt="Floating Resume" 
+      id="floatingResume" 
+      class="hidden w-48 sm:w-64 md:w-72 rounded-lg shadow-lg mt-4" 
+      loading="lazy" 
+      width="200" 
+      height="260"
+    />
+  </picture>
 </section>
+
 
   
   <!-- Footer -->
