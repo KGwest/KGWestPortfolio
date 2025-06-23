@@ -62,38 +62,43 @@ document.addEventListener("DOMContentLoaded", () => {
     floatingResume.style.left = `${80 * Math.random() + 10}%`;
   }
 
-  function downloadResume(autoDownload = false) {
-    const link = document.createElement("a");
-    link.href = "assets/RESUME.pdf";
-    link.setAttribute("download", "Kezia-West-Resume.pdf");
-    link.setAttribute("target", "_blank");
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-
-    // Show celebration GIF here
-    const celebrationGif = document.getElementById("celebrationGif");
-    if (celebrationGif) {
-      celebrationGif.style.display = "block";
-      setTimeout(() => {
-        celebrationGif.style.display = "none";
-      }, 2200);
-    }
-
-    alert(
-      autoDownload
-        ? "You gave it your best shot. Here's my resume – you've earned it!!"
-        : "Nice catch!"
-    );
-
-    if (floatingResume) {
-      floatingResume.style.display = "none";
-      floatingResume.style.top = "100%";
-      floatingResume.style.left = "50%";
-    }
-
-    misses = 0;
+function downloadResume(autoDownload = false) {
+  // Show celebration GIF
+  const gif = document.getElementById("celebrationGif");
+  if (gif) {
+    gif.style.display = "block";
   }
+
+  const link = document.createElement("a");
+  link.href = "assets/RESUME.pdf";
+  link.setAttribute("download", "Kezia-West-Resume.pdf");
+  link.setAttribute("target", "_blank");
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+
+  // Show alert AFTER gif appears
+  alert(
+    autoDownload
+      ? "You gave it your best shot. Here's my resume – you've earned it!!"
+      : "Nice catch!"
+  );
+
+  // Hide celebration GIF after a short delay
+  if (gif) {
+    setTimeout(() => {
+      gif.style.display = "none";
+    }, 1400); // Adjust to match your gif's duration, or just use 1500ms
+  }
+
+  if (floatingResume) {
+    floatingResume.style.display = "none";
+    floatingResume.style.top = "100%";
+    floatingResume.style.left = "50%";
+  }
+
+  misses = 0;
+}
 
   if (resumeButton && floatingResume) {
     resumeButton.addEventListener("click", () => {
