@@ -199,7 +199,11 @@
   <button id="resumeButton" class="px-6 py-3 bg-blue-700 text-white rounded-lg text-lg hover:bg-blue-800 transition">
     Get My Resume
   </button>
-  <img src="assets/resume-thumb.png" alt="Floating Resume" id="floatingResume" class="hidden mt-6" />
+    <picture>
+      <source srcset="assets/resume-thumb.webp" type="image/webp">
+      <source srcset="assets/resume-thumb.png" type="image/png">
+      <img src="assets/resume-thumb.png" alt="Floating Resume" id="floatingResume" class="hidden mt-6" loading="lazy" width="200" height="260" />
+    </picture>
 </section>
 
   
@@ -214,9 +218,7 @@
   </a>
 </footer>
 
-<!-- SCRIPTS SECTION -->
-  
-<!-- Javascript for Resume Button -->
+<!-- SCRIPTS SECTION  
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 <script src="script.js"></script>
 <script>
@@ -273,8 +275,10 @@
       contactCard.classList.add('fall-off');
     }
   });
-</script>
+</script>  -->
 
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="script.js" defer></script>
 
   
 </body>
