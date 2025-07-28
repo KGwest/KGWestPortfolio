@@ -35,21 +35,20 @@ Have fun!
   <body>
     <a id="top"></a>
 
-    <!-- Navbar -->
-    <nav class="bg-gray-900 text-white">
-      <div
-        class="max-w-5xl mx-auto flex items-center justify-between px-4 py-3"
-      >
-        <span class="font-bold text-xl">Kezia West</span>
-        <ul class="flex space-x-6 list-none p-0 m-0">
-          <li><a href="#top" class="hover:text-indigo-400">Home</a></li>
-          <li><a href="#about" class="hover:text-indigo-400">About</a></li>
-          <li>
-            <a href="#projects" class="hover:text-indigo-400">Projects</a>
-          </li>
-          <li><a href="#books" class="hover:text-indigo-400">Books</a></li>
-          <li><a href="#contact" class="hover:text-indigo-400">Contact</a></li>
-        </ul>
+    <!-- Nav Bar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-gray-900/70 text-white shadow-md">
+      <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+        <span class="text-xl font-bold tracking-wide text-accent">KGW</span>
+        <div class="flex-grow flex justify-end">
+          <ul class="flex space-x-8 font-medium items-center">
+            <li><a href="#top" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#skills" class="nav-link">Technical Skills</a></li>
+            <li><a href="#books" class="nav-link">Books</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -142,18 +141,18 @@ Have fun!
 
         <div class="project-card">
           <a
-            href="https://github.com/KGwest/reward_generator"
+            href="https://kgwest.github.io/L-oreal-Chatbot/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h3>Reward Generator</h3>
+            <h3>L’Oréal Smart Product Advisor</h3>
             <br />
             <br />
             <p>
-               A lighthearted mental health support tool that delivers randomized rewards to
-                encourage positive reinforcement and self-care. Developed during my Summer 2025
-                Internship, this app uses JavaScript animations (and plenty of confetti) to
-                create a playful, uplifting user experience.
+              An AI-powered chatbot that offers personalized product advice across L’Oréal’s skincare,
+              haircare, and makeup lines. Built using the OpenAI API, this assistant understands
+              natural language, supports multilingual users, and links directly to L’Oréal’s official
+              tools—all in a sleek, mobile-friendly interface aligned with the brand’s aesthetic.
             </p>
           </a>
         </div>
@@ -197,6 +196,42 @@ Have fun!
       </div>
 
     </section>
+
+    <section id="skills" class="skills-section">
+  <h2>💻 Technical Skills</h2>
+  
+  <div class="skills-grid">
+    <div class="skill-category">
+      <h3>Languages</h3>
+      <ul>
+        <li>JavaScript (Vanilla, DOM manipulation)</li>
+        <li>Python (NLP, Flask basics)</li>
+        <li>SQL (joins, data validation, queries)</li>
+        <li>HTML & CSS (responsive design, animations)</li>
+        <li>C++ (intro level – logic, classes)</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <h3>Libraries & APIs</h3>
+      <ul>
+        <li>OpenAI API (chat completions, NLP apps)</li>
+        <li>Three.js (3D rendering)</li>
+        <li>Markdown to HTML rendering</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <h3>Tools & Platforms</h3>
+      <ul>
+        <li>Git & GitHub (version control)</li>
+        <li>Blender (3D modeling, UV mapping)</li>
+        <li>Figma (interface mockups)</li>
+        <li>ServiceNow, Odoo, Infor ERP (admin support)</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
     <!-- Book Section -->
     <section id="books" class="my-books">
@@ -430,9 +465,13 @@ Have fun!
     ></script>
 
     <!-- My JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="scroll-animations.js"></script> 
     <script src="script.js" defer></script>
 
     <!-- Plausible Website Activity Tracking -->
     <script defer data-domain="kgwest.github.io/kgwestportfolio" src="https://plausible.io/js/script.file-downloads.js"></script>
+  
   </body>
 </html>

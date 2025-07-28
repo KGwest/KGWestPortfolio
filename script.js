@@ -138,7 +138,7 @@ function downloadResume(autoDownload = false) {
         floatingResume.style.display = "none";
       }
     });
-  }
-
-  console.log("script.js loaded");
+  }  
+    console.log("script.js loaded");
 });
+
